@@ -35,10 +35,6 @@ go install github.com/allanavelar/go-media-organizer
 ## Usage
 
 ```bash
-go-media-organizer [-limit n] [-move] [-dry-run] <src> [<dest>]
+go-media-organizer [-limit n] [-ext "xxx|yyy|zzz"] [-move] [-dry-run] <src> [<dest>]
 
 ```
-
-### Options
-
-- `-limit n`: Limits the
