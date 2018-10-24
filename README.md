@@ -35,6 +35,10 @@ go install github.com/allanavelar/go-media-organizer
 ## Usage
 
 ```bash
-go-media-organizer [-limit n] [-ext "xxx|yyy|zzz"] [-move] [-dry-run] <src> [<dest>]
+go-media-organizer [-limit n] [-ext "xxx|yyy|zzz"] [-dry-run] move|copy <src> [<dest>]
+
+# example:
+
+go-media-organizer -limit 100 -ext "jpg|png|gif" copy ~/Pictures ./go-media-organizer-test
 
 ```

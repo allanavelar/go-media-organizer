@@ -1,10 +1,12 @@
 package main
 
 const (
-	AppName    = "go-media-organizer"
-	AppLogFile = ".go-media-organizer.json"
+	AppName = "go-media-organizer"
 
-	FileSizeMin     = 1000 // 1 kb
+	CommandMove = "move"
+	CommandCopy = "copy"
+
+	FileSizeMin     = 1000 // 1000 B / 1 KB
 	FileSizeMinDocs = 10   // 10 B (10 chars)
 
 	MediaTypeDocuments = "documents"
@@ -14,16 +16,16 @@ const (
 
 	DefaultCameraModelFallback = "other"
 
-	DirChecksums = ".checksums"
-	DirDuplicates = ".duplicates"
-	DirMetadata   = ".metadata"
+	DirMetadata   = ".go-media-organizer"
+	DirChecksums  = ".go-media-organizer/.checksums"
+	DirDuplicates = "_go-media-organizer_duplicates"
 
-	// TODO: add possibility to specify extensions via command line options
 	RegexImage       = "(?i)\\.(jpg|jpeg|gif|png|webp|tiff|bmp|raw|svg)$"
 	RegexVideo       = "(?i)\\.(mpg|wmv|avi|mov|m4v|3gp|mp4|flv|webm|ogv|ts)$"
 	RegexAudio       = "(?i)\\.(mp3|m4a|aac|wav|ogg|oga|wma|flac|opus|amr)$"
-	RegexDocument    = "(?i)\\.(doc[x]?|xls[x]?|md|pdf|zip|gz|7z|bak|psd|ai|afphoto|ics|mbox|vcf)$"
-	RegexExcludeDirs = "(?i)(\\.([a-z_0-9-]+)|/bower_components|/node_modules|/developer)/.*$"
+	RegexDocument    = "(?i)\\.(doc[x]?|xls[x]?|ppt[x]?|key|pages|numbers|md|pdf|zip|gz|7z|bak|psd|ai|afphoto|ics|mbox|vcf)$"
+	RegexExcludeDirs = "(?i)(\\.([a-z_0-9-]+)|/bower_components|/node_modules|/vendor|/_go-media-organizer_duplicates)/.*$"
 
-	PathPerms = 0755
+	DirPerms  = 0755
+	FilePerms = 0644
 )
