@@ -1,6 +1,6 @@
 # go-media-organizer
 
-go-media-organizer helps you organize your photos, videos and audios, all automatically.
+😊Command line tool that helps you classifying and organizing automagically your photos, videos, audios and documents ✨
 
 - Having thousands of pictures and videos lost in complex nested folder structures?
 - Don't you remember what camera or phone did you use to take that picture, or if it's even yours?
@@ -8,13 +8,14 @@ go-media-organizer helps you organize your photos, videos and audios, all automa
 - Do you have many screen shots mixed up with your regular photos?
 - Do you have problems finding files from an specific date?
 
-No problemo! go-media-organizer will organize all the mess for you.
+No problemo! This tool will organize all that mess for you.
 
 ## Features
 
-- Restructures a media folder recursively (pictures, videos, audios)
+- Restructures the content of a folder recursively (pictures, videos, audios, archives, contacts, documents, ...)
 - Extracts media file metadata (like EXIF, XMP) and saves it in a metadata folder
-- Organizes the media by year, camera and month
+- Organizes the media by year, camera / app and month
+- Detects screenshots (by path name)
 - Detects duplicates and stores them separately in a 'duplicates' folder
 - Renames all the files using the timestamp and the file MD5 hash
 
@@ -22,7 +23,7 @@ No problemo! go-media-organizer will organize all the mess for you.
 ## Requirements
 
 - [go](https://github.com/golang/go)
-- [exiftool](https://github.com/exiftool/exiftool)
+- [exiftool](https://github.com/exiftool/exiftool) (tested on v11.16)
 
 
 ## Installation
@@ -35,10 +36,10 @@ go install github.com/allanavelar/go-media-organizer
 ## Usage
 
 ```bash
-go-media-organizer [-limit n] [-ext "xxx|yyy|zzz"] [-dry-run] move|copy <src> [<dest>]
+go-media-organizer [-limit n] [-ext "xxx|yyy|zzz"] [-dry-run] [-fix-dates] move|copy <src> [<dest>]
 
 # example:
 
-go-media-organizer -limit 100 -ext "jpg|png|gif" copy ~/Pictures ./go-media-organizer-test
+go-media-organizer -limit 100 -ext "jpg|png|gif" -fix-dates -dry-run copy ~/Pictures ./go-media-organizer-test
 
 ```
