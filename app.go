@@ -12,7 +12,7 @@ import (
 
 type TidyUpWalkFunc func(stats *CmdFileStats, path string, info os.FileInfo, err error) error
 
-func go-media-organizer(params CmdOptions) (CmdFileStats, error) {
+func TidyUp(params CmdOptions) (CmdFileStats, error) {
 	return walkDir(params, func(stats *CmdFileStats, path string, info os.FileInfo, err error) error {
 		fileData, err := GetFileMetadata(params, path, info)
 		HandleError(err)

@@ -81,7 +81,7 @@ func main() {
 				return errors.New("Source and destination directories cannot be the same.")
 			}
 
-			stats, err := go-media-organizer(params)
+			stats, err := TidyUp(params)
 
 			printStats(stats)
 
