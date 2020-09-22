@@ -1,6 +1,6 @@
-# go-media-organizer
+# _go-media-organizer_
 
-Command-line tool written in Go to organize the image and video files of a folder recursively.
+Command-line tool written in Go to organise all media files in a directory recursively by date, detecting duplicates.
 
 ## Features
 
